@@ -1,0 +1,73 @@
+.mainPage {
+	width: 1440px;
+	height: 900px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	&-wrapper {
+		margin: 130px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'firstInfo secondInfo';
+	}
+	&-First {
+		position: relative;
+		grid-area: firstInfo;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&-card {
+		display: flex;
+		flex-direction: column;
+		padding: 100px 40px;
+		&-title {
+			font-size: 76px;
+			line-height: 5rem;
+			font-weight: 700;
+			color: hsl(0, 0%, 8%);
+		}
+		&-text {
+			max-width: 430px;
+			margin-top: 30px;
+			font-size: 18px;
+			line-height: 2rem;
+			font-weight: 500;
+			color: hsl(0, 0%, 41%);
+		}
+		&-button {
+			margin-top: 30px;
+			width: 160px;
+			height: 60px;
+			font-size: 18px;
+			font-weight: 700;
+			border-radius: 15px;
+			border: 1px solid hsl(0, 0%, 8%);
+			cursor: pointer;
+			background-color: hsl(0, 0%, 8%);
+			color: hsl(0, 0%, 98%);
+		}
+		&-button:hover {
+			background-color: hsl(0, 0%, 98%);
+			color: hsl(0, 0%, 8%);
+		}
+	}
+	&-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	&-Second {
+		grid-area: secondInfo;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 480px;
+			height: 640px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+	position: relative;
+	display: block;
+	min-width: 100vw;
+	min-height: 100vh;
+	margin: 0;
+	background-color: hsl(0, 0%, 98%);
+	font-family: 'Epilogue', sans-serif;
+	ul {
+		margin: 0;
+	}
+}
+::-webkit-scrollbar {
+	width: 0px;
+}
