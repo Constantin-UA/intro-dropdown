@@ -1,7 +1,9 @@
 .mainPage {
 	width: 1440px;
 	position: relative;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
 	&-wrapper {
 		margin: 130px;
