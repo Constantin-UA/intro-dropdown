@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Navbar from '../../components/navbar/Navbar';
+
 import ImageHeroDesktop from '../../images/image-hero-desktop.png';
 import ImageHeroMobile from '../../images/image-hero-mobile.png';
 import Databiz from '../../images/client-databiz.svg';
@@ -14,7 +15,7 @@ class MainPage extends Component {
 	render() {
 		return (
 			<section className="mainPage">
-				<Navbar />
+				<Navbar screenWidth={this.state.screenWidth} />
 				<div className="mainPage-wrapper">
 					<div className="mainPage-First">
 						<div className="mainPage-card">
