@@ -1,12 +1,16 @@
 import { Component } from 'react';
 import Navbar from '../../components/navbar/Navbar';
-import ImageHero from '../../images/image-hero-desktop.png';
+import ImageHeroDesktop from '../../images/image-hero-desktop.png';
+import ImageHeroMobile from '../../images/image-hero-mobile.png';
 import Databiz from '../../images/client-databiz.svg';
 import AudioPhile from '../../images/client-audiophile.svg';
 import Meet from '../../images/client-meet.svg';
 import Maker from '../../images/client-maker.svg';
 import './mainPage.scss';
 class MainPage extends Component {
+	state = {
+		screenWidth: window.screen.width,
+	};
 	render() {
 		return (
 			<section className="mainPage">
@@ -16,7 +20,7 @@ class MainPage extends Component {
 						<div className="mainPage-card">
 							<div className="mainPage-card-title">
 								Make
-								<br />
+								{+this.state.screenWidth > 375 ? <br /> : ' '}
 								remote work
 							</div>
 							<div className="mainPage-card-text">
@@ -41,11 +45,18 @@ class MainPage extends Component {
 						</div>
 					</div>
 					<div className="mainPage-Second">
-						<img src={ImageHero} alt="Main" className="mainPageImg" />
+						<ImageSelecter />
 					</div>
 				</div>
 			</section>
 		);
 	}
 }
+const ImageSelecter = () => {
+	const screens = [ImageHeroDesktop, ImageHeroMobile];
+	if (+window.screen.width <= 375)
+		return <img src={screens[1]} alt="Main" className="mainPageImg" />;
+	if (+window.screen.width > 375)
+		return <img src={screens[0]} alt="Main" className="mainPageImg" />;
+};
 export default MainPage;

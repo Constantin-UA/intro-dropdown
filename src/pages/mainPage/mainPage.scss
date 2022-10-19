@@ -28,6 +28,7 @@
 			line-height: 5rem;
 			font-weight: 700;
 			color: hsl(0, 0%, 8%);
+			text-shadow: 0px 0px 2px hsl(0, 0%, 8%);
 		}
 		&-text {
 			max-width: 430px;
@@ -36,11 +37,12 @@
 			line-height: 2rem;
 			font-weight: 500;
 			color: hsl(0, 0%, 41%);
+			text-shadow: 0px 0px 1px hsl(0, 0%, 41%);
 		}
 		&-button {
 			margin-top: 30px;
 			width: 160px;
-			height: 60px;
+			height: 55px;
 			font-size: 18px;
 			font-weight: 700;
 			border-radius: 15px;
@@ -48,8 +50,10 @@
 			cursor: pointer;
 			background-color: hsl(0, 0%, 8%);
 			color: hsl(0, 0%, 98%);
+			transition: all 0.5s ease;
 		}
 		&-button:hover {
+			transform: scale(0.9);
 			background-color: hsl(0, 0%, 98%);
 			color: hsl(0, 0%, 8%);
 		}
@@ -69,6 +73,63 @@
 		img {
 			width: 480px;
 			height: 640px;
+		}
+	}
+}
+
+@media (max-width: 376px) {
+	.mainPage {
+		width: 375px;
+		&-wrapper {
+			margin: 75px auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto;
+			grid-template-areas:
+				'secondInfo'
+				'firstInfo';
+		}
+		&-Second {
+			img {
+				width: 375px;
+				height: unset;
+			}
+		}
+		&-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 40px 5px;
+			&-title {
+				font-size: 34px;
+				line-height: unset;
+				font-weight: 700;
+			}
+			&-text {
+				max-width: 340px;
+				margin-top: 5px;
+				font-size: 16px;
+				line-height: 1.5rem;
+				font-weight: 500;
+			}
+			&-button {
+				margin-top: 20px;
+				width: 130px;
+				height: 45px;
+				font-size: 16px;
+				font-weight: 500;
+				border-radius: 15px;
+			}
+		}
+		&-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			text-align: center;
+			img {
+				width: 70%;
+			}
 		}
 	}
 }
